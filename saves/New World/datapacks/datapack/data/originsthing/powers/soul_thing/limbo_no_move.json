@@ -1,0 +1,16 @@
+{
+  "type": "origins:modify_velocity",
+  "modifier": {
+    "value": -1,
+    "operation": "multiply_total"
+  },
+  "axes": [
+    "x",
+    "y",
+    "z"
+  ],
+  "condition": {
+    "type": "origins:dimension",
+    "dimension": "originsthing:limbo"
+  }
+}

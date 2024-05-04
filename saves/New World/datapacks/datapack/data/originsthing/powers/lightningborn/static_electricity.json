@@ -1,0 +1,12 @@
+{
+  "type": "origins:resource",
+  "min": 0,
+  "max": 100,
+  "hud_render": {
+    "should_render": "true"
+  },
+  "min_action": {
+    "type": "origins:toggle",
+    "power": "*:lightningborn/lightning_aura_toggle"
+  }
+}

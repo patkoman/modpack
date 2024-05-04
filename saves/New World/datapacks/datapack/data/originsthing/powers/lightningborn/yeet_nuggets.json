@@ -1,0 +1,97 @@
+{
+    "type": "apugli:custom_projectile",
+    "texture_location": "minecraft:textures/item/iron_nugget.png",
+    "bientity_action_on_miss": {
+        "type": "apoli:target_action",
+        "action": {
+          "type": "apoli:and",
+          "actions": [
+                {
+                    "type": "apoli:execute_command",
+                    "command": "playsound minecraft:block.metal.step player @a ~ ~ ~ 1 0.7"
+                },
+                {
+                    "type": "apoli:spawn_particles",
+                    "particle": {
+                        "type": "minecraft:item",
+                        "params": "minecraft:iron_nugget"
+                    },
+                    "count": 8,
+                    "speed": 0.1,
+                    "spread": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    }
+                }
+            ]
+        }
+    },
+    "owner_target_bientity_action_on_hit": {
+        "type": "apoli:damage",
+        "source": {
+          "name": "minecraft:lightning_bolt"
+        },
+        "amount": 24
+    },
+    "bientity_action_after_firing" : {
+        "type": "origins:and",
+        "actions": [
+            {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "photon fx photon:trail_shader entity @s"
+        }
+    },
+    {
+        "type": "origins:target_action",
+        "action": {
+            "type": "apugli:set_no_gravity",
+            "value": true
+        }
+    }
+        ]
+    },
+    "entity_action_before_firing": {
+        "type": "origins:modify_inventory",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:iron_nugget"
+            }
+        },
+        "item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "key": {
+        "key": "key.use"
+    },    
+    "divergence": 0.0,
+    "speed": 4,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:power_active",
+                "power": "originsthing:lightningborn/lightning_aura_toggle"
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:iron_nugget"
+                    }
+                }
+            }
+        ]
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": true
+    }
+}

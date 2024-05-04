@@ -1,0 +1,13 @@
+filename = 'realcamera-1.20.1-forge-0.6.0-beta.jar'
+name = 'Real Camera'
+side = 'client'
+
+[download]
+hash = 'bc7d2896168cf902b1e058817c5c380f3e74d6940232649a9046bc90770a1e59b1e2bf16dcfbb099526251dca06c2aaafd12a833a890b88da27a2489de9345a9'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/fYYSAh4R/versions/znHfiUl1/realcamera-1.20.1-forge-0.6.0-beta.jar'
+
+[update.modrinth]
+mod-id = 'fYYSAh4R'
+version = 'znHfiUl1'

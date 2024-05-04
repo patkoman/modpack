@@ -1,0 +1,13 @@
+filename = 'Chargers-1.20-6.0.0.23.jar'
+name = 'Chargers'
+side = 'both'
+
+[download]
+hash = '38ed9a254bcc5085f77042b61dab1abaa8af7d6f5f0761bedc2757ddd5bb52b96c92af9597da0d6912bbd03bd2e5648fc59f351f66c8d64aed165668a38b6014'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/eDFiPATu/versions/FIkgW1OX/Chargers-1.20-6.0.0.23.jar'
+
+[update.modrinth]
+mod-id = 'eDFiPATu'
+version = 'FIkgW1OX'

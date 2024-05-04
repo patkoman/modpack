@@ -1,0 +1,13 @@
+filename = 'JustABattery-47.1.0.jar'
+name = 'Just A Battery'
+side = 'both'
+
+[download]
+hash = '99dbd339d24e95455b60354b832d6752075c4586b12340f90952f0398b50d6995ef606bd186440cb603cb15496fa8580ce01c73b8a9761cbdea351493f90226f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/hzegx5nn/versions/EEmqBaiV/JustABattery-47.1.0.jar'
+
+[update.modrinth]
+mod-id = 'hzegx5nn'
+version = 'EEmqBaiV'

@@ -1,0 +1,13 @@
+filename = 'CIA-1.1.0-Forge-MC1.20.1.jar'
+name = 'Custom Item Attributes (CIA)'
+side = 'server'
+
+[download]
+hash = '62be69ca9a875d505a160393ed243400cf167f6d285359f5996eab003c306b339603f39d2bbcd41383eae55082982d1382cdd1dda209f2b4478434a51c7255bd'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/6wP3NByD/versions/nOD05yYV/CIA-1.1.0-Forge-MC1.20.1.jar'
+
+[update.modrinth]
+mod-id = '6wP3NByD'
+version = 'nOD05yYV'

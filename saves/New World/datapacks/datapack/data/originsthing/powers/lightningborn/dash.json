@@ -1,0 +1,15 @@
+{
+  "type": "origins:modify_velocity",
+  "modifier": {
+    "value": 2,
+    "operation": "multiply_total"
+  },
+  "axes": [
+    "x",
+    "z"
+  ],
+"condition": {
+  "type": "origins:power_active",
+  "power": "*:lightningborn/lightning_aura_toggle"
+}
+}

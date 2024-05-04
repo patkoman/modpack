@@ -1,0 +1,13 @@
+filename = 'photon-forge-1.20.1-1.0.7.a.jar'
+name = 'Photon Editor'
+side = 'both'
+
+[download]
+hash = 'cbf6932c60008fad2b3b286cc521d9db808129253450b974aec90c0b23ffdca52a88a479eb66e038fd8a8fcb85c3003685ca9b1c069b1f15d525fe62778ef077'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/gzevkJbM/versions/Nqqr6UDw/photon-forge-1.20.1-1.0.7.a.jar'
+
+[update.modrinth]
+mod-id = 'gzevkJbM'
+version = 'Nqqr6UDw'

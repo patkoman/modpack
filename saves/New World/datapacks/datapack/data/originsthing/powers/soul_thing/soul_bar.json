@@ -1,0 +1,121 @@
+{
+ "type": "origins:multiple",
+ "in_limbo": {
+  "type": "origins:resource",
+  "hud_render": {
+   "should_render": true
+  },
+  "min": 0,
+  "max": 1,
+  "max_action": {
+   "type": "origins:and",
+   "actions": [
+   {
+    "type": "origins:execute_command",
+    "command": "execute in originsthing:limbo run tp @s ~ 1 ~"
+  },
+  {
+    "type": "origins:trigger_cooldown",
+    "power": "originsthing:soul_thing/soul_bar_limbo_time"
+  }
+  ]
+  },
+  "min_action": {
+   "type": "origins:execute_command",
+   "command": "execute in minecraft:overworld positioned over world_surface run tp @s ~ ~ ~"
+ }
+ },
+ "soul_resource": {
+ "type": "origins:resource",
+ "min": 0,
+ "max": 10,
+ "start_value": 1,
+ "hud_render": {
+  "should_render": true
+ },
+ "min_action": {
+  "type": "origins:damage",
+  "amount": 100,
+  "damage_type": "originsthing:soulless",
+  "modifier": {
+   "operation": "multiply_base_additive",
+   "value": 100
+  }
+ }
+ },
+ "respawn_logic": {
+  "type": "origins:action_on_callback",
+  "entity_action_respawned": {
+   "type": "origins:if_else",
+   "condition": {
+    "type": "origins:resource",
+    "resource": "originsthing:soul_thing/soul_bar_soul_resource",
+    "comparsion": "==",
+    "compare_to": 0
+   },
+   "if_action": {
+   "type": "origins:change_resource",
+   "resource": "originsthing:soul_thing/soul_bar_soul_resource",
+   "change": 1
+  }
+  }
+ },
+ "soul_gains": {
+  "type": "origins:self_action_on_kill",
+  "entity_action": {
+   "type": "origins:change_resource",
+   "resource": "*:soul_thing/soul_bar_soul_resource",
+   "change": 1
+  }
+ },
+ "semi_immortality": {
+  "type": "origins:prevent_death",
+  "condition": {
+   "type": "origins:resource",
+   "resource": "*:soul_thing/soul_bar_soul_resource",
+   "comparison": ">",
+   "compare_to": 1
+  },
+  "entity_action": {
+   "type": "origins:and",
+   "actions": [
+    {
+     "type": "origins:execute_command",
+     "command": "photon fx photon:fakedeath entity @s"
+    },
+    {
+   "type": "origins:change_resource",
+   "resource": "*:soul_thing/soul_bar_soul_resource",
+   "change": -1
+    },
+    {
+     "type": "origins:change_resource",
+     "resource": "originsthing:soul_thing/soul_bar_in_limbo",
+     "change": 1
+    }
+   ]
+  }
+ },
+ "limbo_time": {
+  "type": "origins:cooldown",
+  "cooldown": 100,
+  "hud_render": {
+   "should_render": true
+  }
+ },
+ "limbo_cooldown_handler": {
+  "type": "origins:action_over_time",
+  "entity_action": {
+   "type": "origins:change_resource",
+   "resource": "originsthing:soul_thing/soul_bar_in_limbo",
+   "change": -1
+  },
+  "interval": 1,
+  "condition": {
+   "type": "origins:resource",
+   "resource": "originsthing:soul_thing/soul_bar_limbo_time",
+   "comparison": "==",
+   "compare_to": 1
+  }
+ }
+}

@@ -1,0 +1,13 @@
+filename = 'Lychee-1.20.1-forge-5.1.12.jar'
+name = 'Lychee'
+side = 'both'
+
+[download]
+hash = 'b347cec0d2de2b7eb29a3b279cc21567808de8085ebfa654bfa4f8ec74bec490d3dc92e4fbfab57e0a5f4694b32062394e4c34d51d70d611ad860de6a522a8c0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/TdN6LxjM/versions/qwaP2Vvx/Lychee-1.20.1-forge-5.1.12.jar'
+
+[update.modrinth]
+mod-id = 'TdN6LxjM'
+version = 'qwaP2Vvx'

@@ -1,0 +1,13 @@
+{
+  "type": "origins:toggle",
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": false
+  },
+  "condition": {
+    "type": "origins:resource",
+    "resource": "originsthing:lightningborn/static_electricity",
+    "comparison": ">",
+    "compare_to": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:execute_command",
+            "command": "photon fx photon:lightningaurav3 entity @s 0 0 0 0 0 0 0 false true"
+          },
+          {
+            "type": "origins:execute_command",
+            "command": "photon fx photon:lightningaurav4 entity @s 0 0 0 0 0 0 0 false true"
+          }
+        ]
+    },
+    "interval": 1,
+    "condition": {
+        "type": "origins:power_active",
+        "power": "originsthing:lightningborn/lightning_aura_toggle"
+    }
+}
